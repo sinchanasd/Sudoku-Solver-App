@@ -1,0 +1,652 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SudokuSolver</class>
+ <widget class="QMainWindow" name="SudokuSolver">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>SudokuSolver</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <widget class="QWidget" name="gridLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>100</y>
+      <width>591</width>
+      <height>311</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout" rowstretch="0,0,0,0,0,0,0,0,0" columnstretch="0,0,0,0,0,0,0,0,0">
+     <property name="sizeConstraint">
+      <enum>QLayout::SetFixedSize</enum>
+     </property>
+     <property name="horizontalSpacing">
+      <number>4</number>
+     </property>
+     <property name="verticalSpacing">
+      <number>10</number>
+     </property>
+     <item row="0" column="2">
+      <widget class="QLineEdit" name="b02">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="5">
+      <widget class="QLineEdit" name="b05">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="7">
+      <widget class="QLineEdit" name="b17">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="8">
+      <widget class="QLineEdit" name="b18">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="1">
+      <widget class="QLineEdit" name="b51">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="6">
+      <widget class="QLineEdit" name="b86">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLineEdit" name="b21">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="3">
+      <widget class="QLineEdit" name="b43">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="4">
+      <widget class="QLineEdit" name="b04">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="8">
+      <widget class="QLineEdit" name="b08">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="0">
+      <widget class="QLineEdit" name="b80">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLineEdit" name="b40">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="2">
+      <widget class="QLineEdit" name="b42">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="6">
+      <widget class="QLineEdit" name="b16">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="1">
+      <widget class="QLineEdit" name="b71">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="2">
+      <widget class="QLineEdit" name="b32">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="8">
+      <widget class="QLineEdit" name="b38">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="4">
+      <widget class="QLineEdit" name="b44">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="5">
+      <widget class="QLineEdit" name="b75">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLineEdit" name="b10">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="7">
+      <widget class="QLineEdit" name="b77">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0">
+      <widget class="QLineEdit" name="b50">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="4">
+      <widget class="QLineEdit" name="b74">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="6">
+      <widget class="QLineEdit" name="b36">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="3">
+      <widget class="QLineEdit" name="b03">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="6">
+      <widget class="QLineEdit" name="b26">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="7">
+      <widget class="QLineEdit" name="b67">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="2">
+      <widget class="QLineEdit" name="b72">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="4">
+      <widget class="QLineEdit" name="b34">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="2">
+      <widget class="QLineEdit" name="b82">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="7">
+      <widget class="QLineEdit" name="b87">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="3">
+      <widget class="QLineEdit" name="b83">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="7">
+      <widget class="QLineEdit" name="b37">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="8">
+      <widget class="QLineEdit" name="b28">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="4">
+      <widget class="QLineEdit" name="b64">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="0">
+      <widget class="QLineEdit" name="b70">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="b01">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="5">
+      <widget class="QLineEdit" name="b45">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="b11">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="3">
+      <widget class="QLineEdit" name="b53">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="3">
+      <widget class="QLineEdit" name="b63">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="7">
+      <widget class="QLineEdit" name="b07">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="8">
+      <widget class="QLineEdit" name="b88">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="8">
+      <widget class="QLineEdit" name="b48">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="7">
+      <widget class="QLineEdit" name="b57">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="6">
+      <widget class="QLineEdit" name="b56">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QLineEdit" name="b31">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="1">
+      <widget class="QLineEdit" name="b81">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="5">
+      <widget class="QLineEdit" name="b85">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="6">
+      <widget class="QLineEdit" name="b46">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="1">
+      <widget class="QLineEdit" name="b61">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLineEdit" name="b00">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+       <property name="clearButtonEnabled">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="4">
+      <widget class="QLineEdit" name="b14">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="8">
+      <widget class="QLineEdit" name="b78">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="7">
+      <widget class="QLineEdit" name="b47">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="0">
+      <widget class="QLineEdit" name="b60">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="3">
+      <widget class="QLineEdit" name="b13">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="8">
+      <widget class="QLineEdit" name="b58">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="4">
+      <widget class="QLineEdit" name="b84">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="6">
+      <widget class="QLineEdit" name="b66">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="4">
+      <widget class="QLineEdit" name="b24">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="3">
+      <widget class="QLineEdit" name="b23">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="6">
+      <widget class="QLineEdit" name="b06">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="2">
+      <widget class="QLineEdit" name="b62">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QLineEdit" name="b41">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="2">
+      <widget class="QLineEdit" name="b22">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="3">
+      <widget class="QLineEdit" name="b73">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="4">
+      <widget class="QLineEdit" name="b54">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLineEdit" name="b30">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="7">
+      <widget class="QLineEdit" name="b27">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="3">
+      <widget class="QLineEdit" name="b33">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="5">
+      <widget class="QLineEdit" name="b65">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLineEdit" name="b20">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="5">
+      <widget class="QLineEdit" name="b15">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="6">
+      <widget class="QLineEdit" name="b76">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="2">
+      <widget class="QLineEdit" name="b52">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="8">
+      <widget class="QLineEdit" name="b68">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="5">
+      <widget class="QLineEdit" name="b35">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QLineEdit" name="b12">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="5">
+      <widget class="QLineEdit" name="b25">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="5">
+      <widget class="QLineEdit" name="b55">
+       <property name="maxLength">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QPushButton" name="button">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>430</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Submit</string>
+    </property>
+   </widget>
+   <widget class="QPlainTextEdit" name="plainTextEdit">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>20</y>
+      <width>451</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="plainText">
+     <string>Input numbers (1-9) for cells with fixed value and any other character to denote a blank cell.</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
